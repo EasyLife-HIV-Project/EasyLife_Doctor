@@ -21,4 +21,12 @@
     <string name="ml">мл</string>
     <string name="delete">Удалить</string>
     <string name="doctor_update_notifications">Доктор обновил напоминания</string>
+    <string name="rest_of_pills">Остатки препаратов</string>
+    <string name="add_pill">Добавить препарат</string>
+    <string name="edit_pill">Редактирование препарата</string>
+    <string name="pill_name">Название препарата</string>
+    <string name="inDayCount">Количество в сутки</string>
+    <string name="currentRest">Текущий остаток</string>
+    <string name="predicted_date_pattern">Ожидаемая дата окончания %s</string>
+    <string name="restOfPillsAreGone">Препарат закончился</string>
 </resources>

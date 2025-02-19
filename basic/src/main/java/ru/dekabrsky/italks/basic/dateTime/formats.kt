@@ -12,6 +12,7 @@ import java.util.Locale
 fun formatDateTimeToUiDateTime(dateTime: LocalDateTime): String = formatDateTime(dateTime, "d MMM yyyy, HH:mm")
 
 fun formatDateToUiDate(dateTime: LocalDateTime): String = formatDateTime(dateTime, "d MMM yyyy")
+fun formatDateToUiDate(date: LocalDate): String = formatDateTime(date, "d MMM yyyy")
 
 fun formatDateToUiDateShort(dateTime: LocalDate): String = formatDateTime(dateTime, "dd.MM.yyyy")
 
@@ -51,6 +52,12 @@ fun LocalDateTime.toDate(zoneOffset: ZoneOffset = ZoneOffset.UTC): Date =
 
 fun tryParseServerDate(date: String) = try {
     LocalDate.parse(date, DateTimeFormatter.ofPattern(SERVER_DATE_FORMAT))
+} catch (e: DateTimeParseException) {
+    null
+}
+
+fun tryParseDate(date: String, dateFormat: String) = try {
+    LocalDate.parse(date, DateTimeFormatter.ofPattern(dateFormat))
 } catch (e: DateTimeParseException) {
     null
 }

@@ -80,4 +80,6 @@ abstract class BaseNotificationListPresenter<T: NotificationsListView>(
 
     fun formatDosage(medicineEntity: NotificationMedicineEntity) =
         formatter.formatDosage(medicineEntity)
+
+    abstract fun onRestOfPillsClick()
 }

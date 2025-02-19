@@ -28,6 +28,7 @@ ext.versions = [
         glide               : '4.12.0',
         analytics           : '21.2.0',
         messaging           : '23.4.1',
+        firestore           : '25.1.1'
 ]
 
 ext.libraries = [
@@ -138,6 +139,12 @@ ext.librarySets = [
         messaging: {
             currentProject.dependencies {
                 implementation "com.google.firebase:firebase-messaging:$versions.messaging"
+                implementation 'com.google.gms:google-services:4.3.15'
+            }
+        },
+        firestore: {
+            currentProject.dependencies {
+                implementation "com.google.firebase:firebase-firestore:25.1.1"
                 implementation 'com.google.gms:google-services:4.3.15'
             }
         },

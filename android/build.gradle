@@ -1,4 +1,7 @@
-apply plugin: 'com.google.firebase.appdistribution'
+plugins {
+    id 'com.google.firebase.appdistribution'
+    id 'com.google.gms.google-services'
+}
 
 android {
     buildToolsVersion "30.0.3"
@@ -23,7 +26,7 @@ android {
         minSdkVersion 23
         targetSdkVersion 33
         versionCode 1
-        versionName "1.0"
+        versionName "1.1"
 
         buildConfigField "String", 'ENDPOINT', "\"http://83.222.11.163/\""
     }

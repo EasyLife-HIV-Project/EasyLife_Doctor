@@ -3,10 +3,12 @@ package ru.dekabrsky.feature.notifications.implementation.presentation.presenter
 import ru.dekabrsky.easylife.basic.navigation.router.FlowRouter
 import ru.dekabrsky.easylife.basic.network.utils.ServerErrorHandler
 import ru.dekabrsky.easylife.basic.resources.ResourceProvider
+import ru.dekabrsky.easylife.flows.Flows
 import ru.dekabrsky.feature.notifications.common.presentation.model.NotificationsFlowArgs
 import ru.dekabrsky.feature.notifications.common.utils.NotificationToStringFormatter
 import ru.dekabrsky.feature.notifications.implementation.R
 import ru.dekabrsky.feature.notifications.implementation.domain.interactor.DoctorNotificationInteractor
+import ru.dekabrsky.feature.notifications.implementation.presentation.model.RestOfPillsListScreenArgs
 import ru.dekabrsky.feature.notifications.implementation.presentation.view.DoctorNotificationsListView
 import javax.inject.Inject
 
@@ -31,5 +33,14 @@ class DoctorNotificationListPresenter @Inject constructor(
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
         viewState.setTitle(resourceProvider.getString(R.string.notifications) + " " + flowArgs.patientName.orEmpty())
+    }
+
+    override fun onRestOfPillsClick() {
+        flowArgs.patientId?.let { id ->
+            router.navigateTo(
+                Flows.Notifications.SCREEN_REST_OF_PILLS_LIST,
+                RestOfPillsListScreenArgs(id)
+            )
+        }
     }
 }

@@ -16,6 +16,8 @@ buildscript {
         jcenter()
         maven { url 'https://jitpack.io' }
         maven { url "https://repo.spring.io/milestone" }
+        maven { url 'https://repo.jenkins-ci.org/public' }
+        maven { url 'https://repository.mulesoft.org/nexus/content/repositories/public/'}
     }
     dependencies {
         classpath "com.android.tools.build:gradle:7.3.0"
@@ -42,6 +44,8 @@ allprojects {
         jcenter() // Warning: this repository is going to shut down soon
         maven { url 'https://jitpack.io' }
         maven { url "https://repo.spring.io/milestone" }
+        maven { url 'https://repo.jenkins-ci.org/public' }
+        maven { url 'https://repository.mulesoft.org/nexus/content/repositories/public/'}
     }
 
     configurations { natives }

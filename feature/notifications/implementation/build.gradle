@@ -15,6 +15,7 @@ dependencies {
         retrofit()
         gson()
         room()
+        firestore()
     }
 
     implementation libraries.cicerone

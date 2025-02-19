@@ -20,6 +20,7 @@ import ru.dekabrsky.feature.notifications.common.presentation.model.Notification
 import ru.dekabrsky.feature.notifications.common.utils.NotificationToStringFormatter
 import ru.dekabrsky.feature.notifications.implementation.R
 import ru.dekabrsky.feature.notifications.implementation.domain.interactor.NotificationInteractor
+import ru.dekabrsky.feature.notifications.implementation.presentation.model.RestOfPillsListScreenArgs
 import ru.dekabrsky.feature.notifications.implementation.presentation.view.ChildNotificationsListView
 import ru.dekabrsky.feature.notifications.implementation.receiver.NotificationsReceiver
 import ru.dekabrsky.sharedpreferences.SharedPreferencesProvider
@@ -152,5 +153,14 @@ class ChildNotificationListPresenter @Inject constructor(
     override fun dispatchNotificationDelete(notificationEntity: NotificationEntity) {
         cancelNotification(notificationEntity.uid.orZero())
         super.dispatchNotificationDelete(notificationEntity)
+    }
+
+    override fun onRestOfPillsClick() {
+        loginDataCache.currentUserData?.id?.let { id ->
+            router.navigateTo(
+                Flows.Notifications.SCREEN_REST_OF_PILLS_LIST,
+                RestOfPillsListScreenArgs(id)
+            )
+        }
     }
 }

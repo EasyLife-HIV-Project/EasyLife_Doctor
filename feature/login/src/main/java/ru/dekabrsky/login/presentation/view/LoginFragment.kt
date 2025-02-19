@@ -10,7 +10,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
-import com.tbruyelle.rxpermissions3.RxPermissions
+//import com.tbruyelle.rxpermissions3.RxPermissions
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import main.utils.gone
 import main.utils.onTextChange
@@ -96,13 +96,13 @@ class LoginFragment: BasicFragment(), LoginView {
 
     @RequiresApi(Build.VERSION_CODES.TIRAMISU)
     private fun getNotificationRxPermission() {
-        val disposable = RxPermissions(this).requestEach(Manifest.permission.POST_NOTIFICATIONS)
-            .subscribe {
-                if (it.granted.not()) showAlertDialog()
-            }
-
-
-        compositeDisposable.add(disposable)
+//        val disposable = RxPermissions(this).requestEach(Manifest.permission.POST_NOTIFICATIONS)
+//            .subscribe {
+//                if (it.granted.not()) showAlertDialog()
+//            }
+//
+//
+//        compositeDisposable.add(disposable)
     }
 
     override fun setupForRegistration() {

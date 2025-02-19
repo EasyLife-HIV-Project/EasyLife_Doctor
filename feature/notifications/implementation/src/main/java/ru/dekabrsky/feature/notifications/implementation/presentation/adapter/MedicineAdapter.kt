@@ -12,14 +12,14 @@ import ru.dekabrsky.feature.notifications.implementation.databinding.ItemMedicin
 import ru.dekabrsky.feature.notifications.implementation.presentation.model.MedicineItemUiModel
 
 class MedicineAdapter(
-    private val dataStore: DataStore
+    private val dataStore: MedicineDataStore
 ): RecyclerView.Adapter<MedicineAdapter.MedicineHolder>() {
 
     init {
         setHasStableIds(true)
     }
 
-    interface DataStore {
+    interface MedicineDataStore {
         var items: MutableList<MedicineItemUiModel>
         fun onNameChanged(text: String, position: Int)
         fun onDosageChanged(text: String, position: Int)

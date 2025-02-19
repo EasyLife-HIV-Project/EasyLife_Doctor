@@ -1,6 +1,7 @@
 package ru.dekabrsky.easylife
 
 import android.app.Application
+import com.google.firebase.FirebaseApp
 import com.jakewharton.threetenabp.AndroidThreeTen
 import ru.dekabrsky.easylife.di.module.AppRootModule
 import ru.dekabrsky.easylife.scopes.Scopes
@@ -19,6 +20,7 @@ class App : Application() {
             SmoothieApplicationModule(this)
         )
 
+        FirebaseApp.initializeApp(this)
         AndroidThreeTen.init(this)
     }
 

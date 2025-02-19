@@ -15,6 +15,8 @@ import ru.dekabrsky.easylife.tabs.presentation.fragment.TabsFlowFragment
 import ru.dekabrsky.feature.notifications.common.domain.model.NotificationEntity
 import ru.dekabrsky.feature.notifications.common.presentation.model.NotificationsFlowArgs
 import ru.dekabrsky.feature.notifications.implementation.R
+import ru.dekabrsky.feature.notifications.implementation.presentation.model.EditRestOfPillsScreenArgs
+import ru.dekabrsky.feature.notifications.implementation.presentation.model.RestOfPillsListScreenArgs
 import ru.dekabrsky.feature.notifications.implementation.presentation.presenter.NotificationFlowPresenter
 import ru.dekabrsky.simpleBottomsheet.view.fragment.SimpleInfoBottomSheet
 import ru.dekabrsky.simpleBottomsheet.view.model.BottomSheetScreenArgs
@@ -47,6 +49,12 @@ class NotificationFlowFragment : BasicFlowFragment(), NotificationFlowView {
                             notification = data as? NotificationEntity ?: NotificationEntity(),
                             notificationsScope = scopeName
                         )
+
+                    Flows.Notifications.SCREEN_REST_OF_PILLS_LIST ->
+                        RestOfPillsFragment.newInstance(scopeName, data as RestOfPillsListScreenArgs)
+
+                    Flows.Notifications.SCREEN_EDIT_REST_OF_PILLS ->
+                        EditRestOfPillsFragment.newInstance(scopeName, data as EditRestOfPillsScreenArgs)
 
                     Flows.Common.SCREEN_BOTTOM_INFO ->
                         SimpleInfoBottomSheet.newInstance(data as BottomSheetScreenArgs)

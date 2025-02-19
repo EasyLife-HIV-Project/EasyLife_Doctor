@@ -5,9 +5,9 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:animateLayoutChanges="true"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -16,13 +16,40 @@
         android:layout_height="wrap_content"
         app:titleTextColor="@color/white" />
 
+    <LinearLayout
+        android:id="@+id/restOfPillsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:background="?selectableItemBackground"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/offset_medium"
+        android:paddingTop="@dimen/offset_medium">
+
+        <TextView
+            android:id="@+id/restOfPillsTitle"
+            style="@style/TextView.Subtitle1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rest_of_pills" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_round_chevron_right_24"
+            app:tint="@color/grey_600" />
+
+    </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/basesCardsList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar"
-        android:paddingTop="@dimen/offset_medium"
+        android:layout_below="@id/restOfPillsLayout"
         android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingTop="@dimen/offset_medium"
         android:paddingBottom="@dimen/offset_large"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:itemCount="3"
@@ -32,8 +59,8 @@
         android:id="@+id/emptyLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbar"
-        android:background="@color/grey_50"
+        android:layout_below="@id/restOfPillsLayout"
+        android:background="@color/white"
         android:gravity="center"
         android:orientation="vertical"
         android:visibility="gone"
@@ -58,15 +85,15 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addNotification"
-        android:src="@drawable/ic_round_add_24"
-        app:tint="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:backgroundTint="@color/cyan_main"
-        android:layout_margin="@dimen/offset_medium"
         android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/offset_medium"
+        android:src="@drawable/ic_round_add_24"
+        app:backgroundTint="@color/cyan_main"
         app:fabSize="mini"
-        android:layout_alignParentBottom="true" />
+        app:tint="@color/white" />
 
     <TextView
         android:id="@+id/loadingText"

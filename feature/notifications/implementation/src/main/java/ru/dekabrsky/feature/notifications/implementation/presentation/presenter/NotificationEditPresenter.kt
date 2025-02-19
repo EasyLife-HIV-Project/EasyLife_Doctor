@@ -32,7 +32,7 @@ class NotificationEditPresenter @Inject constructor(
     private val existingNotification: NotificationEntity,
     private val mapper: NotificationEntityToUiMapper,
     private val analyticsSender: AnalyticsSender
-) : BasicPresenter<NotificationEditView>(router), MedicineAdapter.DataStore {
+) : BasicPresenter<NotificationEditView>(router), MedicineAdapter.MedicineDataStore {
 
     private val interactor = flowArgs.patientId?.let { id ->
         doctorInteractor.apply { setUserId(id) }

@@ -42,6 +42,7 @@ abstract class NotificationsListFragment<T : BaseNotificationListPresenter<*>> :
         binding.basesCardsList.adapter = adapter
         binding.toolbar.setTitle(R.string.notifications)
         binding.addNotification.setOnClickListener { presenter.onAddNotificationClick() }
+        binding.restOfPillsLayout.setOnClickListener { presenter.onRestOfPillsClick() }
     }
     override fun setChatsList(items: List<NotificationEntity>) {
         adapter.updateItems(items)

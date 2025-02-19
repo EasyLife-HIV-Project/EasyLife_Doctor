@@ -1,0 +1,97 @@
+{
+  "project_info": {
+    "project_number": "352561988518",
+    "project_id": "easylife-a7c86",
+    "storage_bucket": "easylife-a7c86.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352561988518:android:69964c27c810aa9da40567",
+        "android_client_info": {
+          "package_name": "ru.dekabrsky.easylife"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352561988518-d39su70c8lsbttllb6arfi75hl5l04eq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxsEPgVBOKiJenThqhQnYP5PY65sMiTyk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352561988518-d39su70c8lsbttllb6arfi75hl5l04eq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352561988518:android:b078b6b11087de02a40567",
+        "android_client_info": {
+          "package_name": "ru.dekabrsky.italks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352561988518-d39su70c8lsbttllb6arfi75hl5l04eq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxsEPgVBOKiJenThqhQnYP5PY65sMiTyk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352561988518-d39su70c8lsbttllb6arfi75hl5l04eq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352561988518:android:3aa289f298fb9008a40567",
+        "android_client_info": {
+          "package_name": "ru.newz.easyLife"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352561988518-d39su70c8lsbttllb6arfi75hl5l04eq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxsEPgVBOKiJenThqhQnYP5PY65sMiTyk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352561988518-d39su70c8lsbttllb6arfi75hl5l04eq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
